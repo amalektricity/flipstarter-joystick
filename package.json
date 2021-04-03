@@ -1,0 +1,37 @@
+{
+  "name": "flipstarter-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prettier": "npx prettier@2.0.5 '**/*.js' --write",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "DEBUG='flipstarter:*' node --use-strict server.js",
+    "verbose": "DEBUG='flipstarter:*, -flipstarter:object' node --use-strict server.js",
+    "start": "npx webpack -o static/js/application.js && DEBUG='flipstarter:status, flipstarter:server' node --use-strict server.js",
+    "start-no-debug": "npx webpack -o static/js/application.js && node --use-strict server.js"
+  },
+  "author": "Jonathan Silverblood",
+  "license": "MIT",
+  "dependencies": {
+    "async-mutex": "^0.1.4",
+    "better-sqlite3": "^5.4.3",
+    "bitbox-sdk": "^8.11.2",
+    "canvas-confetti": "^1.2.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dompurify": "^2.0.12",
+    "electrum-cash": "^2.0.1",
+    "express": "^4.17.1",
+    "express-sse": "^0.5.1",
+    "marked": "^1.1.1",
+    "materialize-css": "^1.0.0",
+    "moment": "^2.27.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
